@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="轩邈">
+    <meta name="copyright" content="轩邈">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- 网站SEO -->
+    <title>gallery</title>
+    <meta name="keywords" content="轩邈 xuanmiao xuanmiao.com">
+    <meta name="description" content="轩邈 | 猎奇蜗牛">
+    <!-- 标题栏logo图标 -->
+    <link rel="icon" href="../style/image/favicon_logo.ico" type="image/x-icon">
+    <!-- 收藏夹logo图标 -->
+    <link rel="shortcut icon" href="../style/image/favicon_logo.ico" type="image/x-icon">
+    <style>
+        body {
+            font-size: 12px;
+            width: 100%;
+            min-width: 1280px;
+            overflow-x: hidden;
+            margin:0;
+        }
+        .nav-box{
+            margin:0 auto;
+            width: 100%;
+            height: 88px;
+            background: rgba(97,208,234,0.3);
+            position: fixed;
+        }
+        /*logo*/
+        .nav-wrap{
+            height: 100%;
+            width: 1200px;
+            margin:0 auto;
+        }
+        .nav-wrap a.nav-logo{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 50%;
+            border-radius: 100% 20px 100% 20px;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(20deg);
+            overflow: hidden;
+
+        }
+        .nav-logo img{
+            height:120%;
+            transform: rotate(-10deg);
+            margin:-6px auto auto;
+        }
+        .nav-box .nav-wrap h1{
+            width: 100px;
+            position: absolute;
+            height: 30%;
+            transform: translate(0%,-50%);
+            top:50%;
+            margin: auto  auto  auto 80px;
+            font: 700 18px "微软雅黑";
+            color: #4285F4;
+            letter-spacing: 1px;
+        }
+        /*导航列表*/
+        ul.nav-list{
+            list-style: none;
+            float: right;
+            text-align: center;
+            margin: 26px auto;
+        }
+        .nav-list-li{
+            border-radius: 18px;
+            height: 36px;
+            padding: 0 20px;
+            display: inline-block;
+            font: 14px/36px "微软雅黑" ;
+            margin: 0 4px;
+            cursor: pointer;
+            color: #777;
+            transition: 0.3s;
+        }
+        .nav-list-li.active,.nav-list-li:hover{
+            color: #fff;
+            background: #0A8CD2;
+        }
+        /*顶部背景图*/
+        .top-bground{
+            width: 100%;
+            height: 388px;
+            background: #39424F url("../style/image/gallery/liukanshan.png") -20px;
+            background-size: 100% ;
+        }
+        /*作品展示*/
+        .content{
+            width: 1200px;
+            margin: 20px auto;
+            /*background: #fff58b;*/
+        }
+        .content:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*分类*/
+        .classification .nav-list{
+            float: left;
+        }
+        /*作品展示区*/
+        .work-box{
+            width: 100%;
+            padding: 90px 10px;
+            box-sizing: border-box;
+            /*display: flex;*/
+            /*justify-content: space-around;*/
+        }
+        .work-box:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .work{
+            margin:10px 5px;
+            width:376px;
+            height:300px;
+            /*background: #00CCFF;*/
+            border: 3px solid #fff;
+            border-radius: 3px;
+            float: left;
+            transition: 0.5s;
+        }
+        .work:hover{
+            box-shadow: 0 0 20px 5px #ccc;
+        }
+        .work img{
+            display: block;
+            padding: 5px;
+            width: 100%;
+            height: 220px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .work .work-description{
+            font-size: 16px;
+            color: #666;
+            margin: 16px auto 0 26px;
+        }
+        .work .work-sort {
+            font-size: 12px;
+            color: #999;
+            margin:4px 26px;
+        }
+        ul, li {
+            padding: 0;
+            margin: 0;
+        }
+        .paging_box {
+            width:240px;
+            bottom: 60px;
+            left: 50%;
+            margin:0 auto;
+        }
+        .paging {
+            padding: 0 20px;
+            height: 38px;
+            box-shadow: 0 0 34px rgba(10,140,210, 0.42);
+            border-radius: 21px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .paging li {
+            display: inline-block;
+            list-style: none;
+            padding: 0 10px;
+        }
+        .paging a {
+            font-size: 14px;
+            color: #0A8CD2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-box">
+        <div class="nav-wrap">
+            <a class="nav-logo" href="http://www.xuanmiao.wang/">
+                <img src="../style/image/eye_earth.jpg" alt="轩邈树">
+            </a>
+            <h1>轩邈</h1>
+            <ul class="nav-list">
+                <li class="nav-list-li">轩邈</li>
+                <li class="nav-list-li active">作品</li>
+                <li class="nav-list-li">利器</li>
+                <li class="nav-list-li">看点</li>
+                <li class="nav-list-li">有趣</li>
+                <li class="nav-list-li">上墙</li>
+                <li class="nav-list-li">关于</li>
+            </ul>
+        </div>
+    </nav>
+    <section class="top-bground"></section>
+    <section class="content">
+        <nav class="classification">
+            <ul class="nav-list">
+                <li class="nav-list-li active">全部</li>
+                <li class="nav-list-li">作业</li>
+                <li class="nav-list-li">整站开发</li>
+                <li class="nav-list-li">WebAPP</li>
+                <li class="nav-list-li">交互特效</li>
+                <li class="nav-list-li">动画效果</li>
+            </ul>
+        </nav>
+        <div class="work-box">
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/1.png">
+                <p class="work-description">修改样式</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/2.bmp">
+                <p class="work-description">图片切换</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/3.bmp">
+                <p class="work-description">qq消息模仿</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/4.bmp">
+                <p class="work-description">9*9乘法表</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/5.bmp">
+                <p class="work-description">qq消息模仿美化版</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/6.bmp">
+                <p class="work-description">组图片切换</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/7.bmp">
+                <p class="work-description">图片切换美化版</p>
+                <p class="work-sort">作业一</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/8.bmp">
+                <p class="work-description">鼠标事件测试</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/9.bmp">
+                <p class="work-description">蘑菇街轮播图模仿</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/10.bmp">
+                <p class="work-description">QQ好友列表</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/11.bmp">
+                <p class="work-description">图片缩略图及切换</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/12.bmp">
+                <p class="work-description">纯CSS单选切换</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/13.bmp">
+                <p class="work-description">js单选切换</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/14.bmp">
+                <p class="work-description">鼠标移入显示图片</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/15.bmp">
+                <p class="work-description">鼠标移入显示图片（有间距版）</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/16.bmp">
+                <p class="work-description">评价</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/17.bmp">
+                <p class="work-description">音乐列表选择</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/18.bmp">
+                <p class="work-description">数据类型练习</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/19.bmp">
+                <p class="work-description">商品计价器</p>
+                <p class="work-sort">作业</p>
+            </div>
+            <div class="work">
+                <img class="work-pic" src="../style/image/gallery/work/20.bmp">
+                <p class="work-description">修改文本框属性值</p>
+                <p class="work-sort">作业</p>
+            </div>
+        </div>
+        <div class="paging_box" id="page">
+            <div class="paging">
+                <ol>
+                    <li>1</li>
+                    <li><a href="list_1_2.html">2</a></li>
+                    <li><a href="list_1_3.html">3</a></li>
+                    <li><a href="list_1_2.html">下一页</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!--PC和WAP自适应版-->
+    <div id="SOHUCS" sid="test" ></div>
+    <script type="text/javascript">
+        (function(){
+            var appid = 'cyta58lOY';
+            var conf = 'prod_cf04a930fa4d050bbcb31e36e9febb86';
+            var width = window.innerWidth || document.documentElement.clientWidth;
+            if (width < 960) {
+                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+<script>
+
+</script>
+</body>
+</html>
