@@ -3,3 +3,6 @@
   2.作品页面（链接未放置）。
   2017.8.19更新
   计划：轮播图，日历，作品页面链接放置，页数切换。
+  
+  this feathub.com test
+  [![Feature Requests](https://feathub.com/xuanmiaoshuo/xuanmiao.wang?format=svg)](https://feathub.com/xuanmiaoshuo/xuanmiao.wang)
